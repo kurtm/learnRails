@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# specify ruby version
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
@@ -43,3 +45,30 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+# learnRails gems
+
+# helps to use Rails w/o a database
+gem 'activerecord-tableless'
+# configuration framework
+gem 'figaro'
+# front-end framework
+gem 'foundation-rails'
+# access MailChimp API
+gem 'gibbon'
+# use Google Drive spreadsheets for data storage
+gem 'google_drive'
+# static pages eg "abouit"
+gem 'high_voltage'
+# forms made easy
+gem 'simple_form'
+
+# utilities to ease development
+# specifiying as development group ensures gems wont be loaded in production
+group :development do
+    #helps when things go wrong
+    gem 'better_errors'
+    # suppresses distracting messages in log
+    gem 'quiet_assets'
+    # generates files for an application layout
+    gem 'rails_layout'
+end
