@@ -72,3 +72,9 @@ group :development do
     # generates files for an application layout
     gem 'rails_layout'
 end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+	gem 'thin'
+end
