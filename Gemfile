@@ -5,9 +5,6 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -49,16 +46,22 @@ end
 
 # helps to use Rails w/o a database
 gem 'activerecord-tableless'
+
 # configuration framework
 gem 'figaro'
+
 # front-end framework
 gem 'foundation-rails'
+
 # access MailChimp API
 gem 'gibbon'
+
 # use Google Drive spreadsheets for data storage
 gem 'google_drive'
+
 # static pages eg "abouit"
 gem 'high_voltage'
+
 # forms made easy
 gem 'simple_form'
 
@@ -71,10 +74,18 @@ group :development do
     gem 'quiet_assets'
     # generates files for an application layout
     gem 'rails_layout'
+    # Use sqlite3 as the database for Active Record
+    gem 'sqlite3'
 end
 
+# specify gems for production
 group :production do
-	gem 'pg'
+	# PostgreSQL
+  gem 'pg'
+  
+  # Rails 4.0.0 analytics compatibility
 	gem 'rails_12factor'
-	gem 'thin'
+	
+  # Thin web server
+  gem 'thin'
 end
